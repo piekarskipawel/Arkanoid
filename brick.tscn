@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://70xncklu4btw"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_nkspu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_awxk8"]
+size = Vector2(4.28125, 2.046875)
+
+[node name="Brick" type="Node2D" unique_id=1057769201]
+
+[node name="Brick" type="StaticBody2D" parent="." unique_id=1981410567 groups=["Bricks"]]
+scale = Vector2(32, 32)
+
+[node name="Sprite2D" type="Sprite2D" parent="Brick" unique_id=1318552727]
+position = Vector2(6.1262493, 4.109374)
+scale = Vector2(3.7475016, 1.4687517)
+texture = SubResource("PlaceholderTexture2D_nkspu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Brick" unique_id=599309529]
+position = Vector2(6.09375, 4.09375)
+shape = SubResource("RectangleShape2D_awxk8")

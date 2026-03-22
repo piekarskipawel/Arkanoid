@@ -1,0 +1,179 @@
+[gd_scene format=3 uid="uid://cnjci231tlu4f"]
+
+[ext_resource type="Script" uid="uid://cor60pwmnt0nh" path="res://paddle.gd" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://b0mffjs547ls3" path="res://main.gd" id="1_1bvp3"]
+[ext_resource type="Script" uid="uid://bcxdwn5kw302d" path="res://ball.gd" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://70xncklu4btw" path="res://brick.tscn" id="3_h2yge"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_7dm0k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7dm0k"]
+size = Vector2(121, 36)
+
+[sub_resource type="Gradient" id="Gradient_1bvp3"]
+offsets = PackedFloat32Array(0.48192772, 0.5421687)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_lquwl"]
+gradient = SubResource("Gradient_1bvp3")
+width = 32
+height = 32
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1bvp3"]
+radius = 16.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_272bh"]
+size = Vector2(1159, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1bvp3"]
+size = Vector2(20, 661)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lquwl"]
+size = Vector2(20, 662)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7mycd"]
+size = Vector2(1153.5, 20)
+
+[node name="main" type="Node2D" unique_id=1305868959]
+script = ExtResource("1_1bvp3")
+
+[node name="Paddle" type="CharacterBody2D" parent="." unique_id=606293733]
+script = ExtResource("1_0xm2m")
+
+[node name="Sprite2D" type="Sprite2D" parent="Paddle" unique_id=833524105]
+position = Vector2(550, 619)
+scale = Vector2(100, 19.481)
+texture = SubResource("PlaceholderTexture2D_7dm0k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paddle" unique_id=1688477012]
+position = Vector2(550.5, 618)
+shape = SubResource("RectangleShape2D_7dm0k")
+
+[node name="Ball" type="CharacterBody2D" parent="." unique_id=2049244702]
+script = ExtResource("2_0xm2m")
+
+[node name="Sprite2D" type="Sprite2D" parent="Ball" unique_id=1867406973]
+position = Vector2(480, 391.00003)
+scale = Vector2(1.698, 1)
+texture = SubResource("GradientTexture2D_lquwl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ball" unique_id=1189271000]
+position = Vector2(480, 391)
+shape = SubResource("CircleShape2D_1bvp3")
+
+[node name="Brick" parent="." unique_id=1057769201 instance=ExtResource("3_h2yge")]
+modulate = Color(0.07824787, 0.72235835, 0.7126285, 1)
+self_modulate = Color(0.17307678, 0.7421986, 0.69695705, 1)
+position = Vector2(-88, -71)
+
+[node name="Brick2" parent="." unique_id=486342560 instance=ExtResource("3_h2yge")]
+modulate = Color(0.7029553, 0.10310838, 0.31122652, 1)
+position = Vector2(66, -71)
+
+[node name="Brick3" parent="." unique_id=2044211510 instance=ExtResource("3_h2yge")]
+modulate = Color(0.8880054, 0.8992354, 0.23156676, 1)
+position = Vector2(219, -70)
+
+[node name="Brick4" parent="." unique_id=627756519 instance=ExtResource("3_h2yge")]
+modulate = Color(0.1436925, 0.9363826, 0.09635029, 1)
+position = Vector2(372, -69)
+
+[node name="Brick5" parent="." unique_id=1579241541 instance=ExtResource("3_h2yge")]
+modulate = Color(0.9194159, 0.49649793, 0.11988764, 1)
+position = Vector2(521, -69)
+
+[node name="Brick6" parent="." unique_id=1743264695 instance=ExtResource("3_h2yge")]
+modulate = Color(0.9956499, 0.99565023, 1.3861656e-05, 1)
+position = Vector2(669, -69)
+
+[node name="Brick7" parent="." unique_id=2003143635 instance=ExtResource("3_h2yge")]
+modulate = Color(0.8352941, 0.7921569, 0.5019608, 1)
+position = Vector2(818, -68)
+
+[node name="Brick8" parent="." unique_id=1335352808 instance=ExtResource("3_h2yge")]
+modulate = Color(0.62091595, 0.088139124, 0.10045005, 1)
+position = Vector2(-20, 9)
+
+[node name="Brick9" parent="." unique_id=1458825104 instance=ExtResource("3_h2yge")]
+modulate = Color(0.6342527, 0.9280188, 0.25766784, 1)
+position = Vector2(129, 10)
+
+[node name="Brick10" parent="." unique_id=1259790240 instance=ExtResource("3_h2yge")]
+modulate = Color(0.35253903, 0.33183005, 0.3264042, 1)
+position = Vector2(278, 10)
+
+[node name="Brick11" parent="." unique_id=129677789 instance=ExtResource("3_h2yge")]
+modulate = Color(0.7159233, 0.71387357, 0.7200002, 1)
+position = Vector2(425, 10)
+
+[node name="Brick12" parent="." unique_id=919593594 instance=ExtResource("3_h2yge")]
+modulate = Color(0.8936984, 0.8921665, 0.3671535, 1)
+position = Vector2(572, 12)
+
+[node name="Brick13" parent="." unique_id=345587256 instance=ExtResource("3_h2yge")]
+modulate = Color(0.815826, 0.5784765, 0.697192, 1)
+position = Vector2(718, 13)
+
+[node name="Brick2" parent="Brick13" unique_id=1251353766 instance=ExtResource("3_h2yge")]
+position = Vector2(-674, 76)
+
+[node name="Brick14" parent="." unique_id=455355665 instance=ExtResource("3_h2yge")]
+modulate = Color(1, 0.9452769, 0.48565158, 1)
+position = Vector2(196, 89)
+
+[node name="Brick15" parent="." unique_id=1422967229 instance=ExtResource("3_h2yge")]
+modulate = Color(0.47196072, 0.5420044, 0.88290143, 1)
+position = Vector2(344, 89)
+
+[node name="Brick16" parent="." unique_id=96824268 instance=ExtResource("3_h2yge")]
+modulate = Color(0.91775256, 0.76737565, 0.46135613, 1)
+position = Vector2(492, 89)
+
+[node name="Brick17" parent="." unique_id=364246263 instance=ExtResource("3_h2yge")]
+modulate = Color(0.5116678, 0.86076874, 0.56757206, 1)
+position = Vector2(641, 90)
+
+[node name="Wall" type="StaticBody2D" parent="." unique_id=2126522573]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall" unique_id=1255599910]
+position = Vector2(569.5, 0)
+shape = SubResource("RectangleShape2D_272bh")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Wall" unique_id=1880787694]
+position = Vector2(-9, 320)
+shape = SubResource("RectangleShape2D_1bvp3")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Wall" unique_id=846293329]
+position = Vector2(1158, 319)
+shape = SubResource("RectangleShape2D_lquwl")
+
+[node name="DeathZone" type="Area2D" parent="." unique_id=206879245]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone" unique_id=482304980]
+position = Vector2(577.25, 651)
+shape = SubResource("RectangleShape2D_7mycd")
+
+[node name="WinUI" type="CanvasLayer" parent="." unique_id=633951409]
+process_mode = 3
+visible = false
+
+[node name="Label" type="Label" parent="WinUI" unique_id=536657008]
+offset_left = 395.0
+offset_top = 267.0
+offset_right = 733.0
+offset_bottom = 355.0
+theme_override_font_sizes/font_size = 64
+text = "WYGRANA!"
+
+[node name="Button" type="Button" parent="WinUI" unique_id=811255260]
+offset_left = 499.0
+offset_top = 356.0
+offset_right = 626.0
+offset_bottom = 387.0
+text = "Zagraj od nowa"
+
+[connection signal="body_entered" from="DeathZone" to="." method="_on_death_zone_body_entered"]
+[connection signal="pressed" from="WinUI/Button" to="." method="_on_button_pressed"]
